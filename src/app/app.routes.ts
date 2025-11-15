@@ -14,5 +14,11 @@ export const routes: Routes = [
     component: PrincipalDashboard,
     canActivate: [authGuard],
   },
+  {
+    path: 'monitoring',
+    loadChildren: () =>
+      import('./modules/monitoring/monitoring-module').then((m) => m.MonitoringModule),
+    canActivate: [authGuard],
+  },
   { path: '**', redirectTo: '' },
 ];

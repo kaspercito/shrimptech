@@ -1,0 +1,82 @@
+<div class="monitoring-dashboard">
+  <!-- HEADER DEL MÓDULO -->
+  <div class="dashboard-header">
+    <h1>🌊 Monitoreo Ambiental</h1>
+    <p class="subtitle">Control en tiempo real de parámetros del agua</p>
+    <div class="header-stats">
+      <div class="stat-card">
+        <span class="stat-value">12</span>
+        <span class="stat-label">Tanques activos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">85%</span>
+        <span class="stat-label">Parámetros óptimos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">2</span>
+        <span class="stat-label">Alertas activas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPONENTE DE PARÁMETROS -->
+  <app-water-parameters></app-water-parameters>
+
+  <!-- COMPONENTE DE ALERTAS -->
+  <app-alerts-panel></app-alerts-panel>
+
+  <!-- GRÁFICAS DE TENDENCIAS -->
+  <div class="charts-section">
+    <h2>📈 Tendencia de Parámetros - Últimas 24 horas</h2>
+    <div class="charts-grid">
+      <div class="chart-container">
+        <div class="chart-placeholder">
+          <span class="chart-icon">📊</span>
+          <p>Gráfica de Temperatura</p>
+          <small>Rango óptimo: 26°C - 32°C</small>
+        </div>
+      </div>
+      <div class="chart-container">
+        <div class="chart-placeholder">
+          <span class="chart-icon">📊</span>
+          <p>Gráfica de Oxígeno Disuelto</p>
+          <small>Rango óptimo: 4mg/L - 8mg/L</small>
+        </div>
+      </div>
+      <div class="chart-container">
+        <div class="chart-placeholder">
+          <span class="chart-icon">📊</span>
+          <p>Gráfica de pH</p>
+          <small>Rango óptimo: 7.0 - 8.5</small>
+        </div>
+      </div>
+      <div class="chart-container">
+        <div class="chart-placeholder">
+          <span class="chart-icon">📊</span>
+          <p>Gráfica de Salinidad</p>
+          <small>Rango óptimo: 25ppt - 35ppt</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTROS Y CONTROLES -->
+  <div class="controls-section">
+    <div class="filters">
+      <select class="filter-select">
+        <option>Todos los tanques</option>
+        <option>Tanque 1</option>
+        <option>Tanque 2</option>
+        <option>Tanque 3</option>
+      </select>
+
+      <select class="filter-select">
+        <option>Últimas 24 horas</option>
+        <option>Última semana</option>
+        <option>Último mes</option>
+      </select>
+
+      <button class="export-btn">📥 Exportar Reporte</button>
+    </div>
+  </div>
+</div>

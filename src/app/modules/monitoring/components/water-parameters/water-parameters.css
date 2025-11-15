@@ -1,0 +1,92 @@
+.water-parameters {
+  margin: 30px 0;
+  background: #fff;
+}
+
+.water-parameters h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.parameters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.parameter-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #0097a7;
+  transition: transform 0.3s ease;
+}
+
+.parameter-card:hover {
+  transform: translateY(-3px);
+  border-left-color: #00bcd4;
+}
+
+.parameter-card.warning {
+  border-left-color: #ff9800;
+}
+
+.parameter-card.critical {
+  border-left-color: #f44336;
+}
+
+.parameter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.parameter-icon {
+  font-size: 1.5rem;
+}
+
+.parameter-name {
+  font-weight: 600;
+  color: #333;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.parameter-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.parameter-status.optimal {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.parameter-status.warning {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.parameter-status.critical {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.parameter-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.parameter-range,
+.parameter-location,
+.parameter-time {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}

@@ -1,0 +1,70 @@
+<div class="alerts-panel">
+  <h2>🚨 Panel de Alertas</h2>
+
+  <div class="alerts-container">
+    <!-- Alerta Crítica -->
+    <div class="alert-card critical">
+      <div class="alert-header">
+        <span class="alert-icon">🔥</span>
+        <span class="alert-title">Nivel Crítico de Amonio</span>
+        <span class="alert-time">Hace 15 min</span>
+      </div>
+      <div class="alert-content">
+        <p>El amonio en el <strong>Tanque T-08</strong> ha alcanzado <strong>1.2 mg/L</strong></p>
+        <p class="alert-suggestion">Sugerencia: Realizar cambio de agua inmediato</p>
+      </div>
+      <div class="alert-actions">
+        <button class="btn-acknowledge">Marcar como Visto</button>
+        <button class="btn-details">Ver Detalles</button>
+      </div>
+    </div>
+
+    <!-- Alerta de Precaución -->
+    <div class="alert-card warning">
+      <div class="alert-header">
+        <span class="alert-icon">⚠️</span>
+        <span class="alert-title">Oxígeno Disuelto Bajo</span>
+        <span class="alert-time">Hace 30 min</span>
+      </div>
+      <div class="alert-content">
+        <p>El oxígeno en el <strong>Tanque T-08</strong> está en <strong>3.8 mg/L</strong></p>
+        <p class="alert-suggestion">Sugerencia: Aumentar aireación</p>
+      </div>
+      <div class="alert-actions">
+        <button class="btn-acknowledge">Marcar como Visto</button>
+        <button class="btn-details">Ver Detalles</button>
+      </div>
+    </div>
+
+    <!-- Alerta Resuelta -->
+    <div class="alert-card resolved">
+      <div class="alert-header">
+        <span class="alert-icon">✅</span>
+        <span class="alert-title">Temperatura Normalizada</span>
+        <span class="alert-time">Hace 2 horas</span>
+      </div>
+      <div class="alert-content">
+        <p>
+          La temperatura en el <strong>Tanque T-12</strong> se ha normalizado a
+          <strong>28.5°C</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resumen de Alertas -->
+  <div class="alerts-summary">
+    <div class="summary-card">
+      <span class="summary-count critical">2</span>
+      <span class="summary-label">Críticas</span>
+    </div>
+    <div class="summary-card">
+      <span class="summary-count warning">1</span>
+      <span class="summary-label">Advertencias</span>
+    </div>
+    <div class="summary-card">
+      <span class="summary-count resolved">3</span>
+      <span class="summary-label">Resueltas</span>
+    </div>
+  </div>
+</div>

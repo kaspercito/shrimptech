@@ -1,0 +1,146 @@
+.alerts-panel {
+  margin: 30px 0;
+  background: #fff;
+}
+
+.alerts-panel h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.alerts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.alert-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #f44336;
+}
+
+.alert-card.warning {
+  border-left-color: #ff9800;
+}
+
+.alert-card.resolved {
+  border-left-color: #4caf50;
+  opacity: 0.7;
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.alert-icon {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.alert-title {
+  font-weight: 600;
+  flex-grow: 1;
+  color: #333;
+}
+
+.alert-time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.alert-content p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.alert-suggestion {
+  font-style: italic;
+  color: #666;
+  background: #f8f9fa;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 8px !important;
+}
+
+.alert-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-acknowledge {
+  background: #0097a7;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.btn-acknowledge:hover {
+  background: #00bcd4;
+}
+
+.btn-details {
+  background: transparent;
+  color: #0097a7;
+  border: 1px solid #0097a7;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-details:hover {
+  background: #0097a7;
+  color: white;
+}
+
+.alerts-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.summary-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.summary-count {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.summary-count.critical {
+  color: #f44336;
+}
+
+.summary-count.warning {
+  color: #ff9800;
+}
+
+.summary-count.resolved {
+  color: #4caf50;
+}
+
+.summary-label {
+  color: #666;
+  font-size: 0.9rem;
+}
