@@ -1,0 +1,34 @@
+<div class="card">
+
+  <div class="header">
+    <h1>Nuevo Evento</h1>
+    <button class="btn-back" routerLink="/production/eventos">← Volver</button>
+  </div>
+
+  <form (ngSubmit)="guardar()" class="form-container">
+
+    <div class="form-group">
+      <label>Fecha</label>
+      <input type="date" [(ngModel)]="evento.fecha" name="fecha" required>
+    </div>
+
+    <div class="form-group">
+      <label>Tipo de Evento</label>
+      <select [(ngModel)]="evento.tipo" name="tipo" required>
+        <option value="" disabled selected>Seleccionar tipo</option>
+        <option>Alimentación</option>
+        <option>Tratamiento</option>
+        <option>Incidencia</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Nota</label>
+      <textarea [(ngModel)]="evento.nota" name="nota"></textarea>
+    </div>
+
+    <button type="submit" class="btn-save">Guardar</button>
+
+  </form>
+
+</div>

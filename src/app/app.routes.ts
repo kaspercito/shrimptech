@@ -14,6 +14,12 @@ export const routes: Routes = [
     component: PrincipalDashboard,
     canActivate: [authGuard],
   },
+  /*{
+    path: 'inventory',
+    loadChildren: () =>
+      import('./modules/inventory/inventory-module').then((m) => m.InventoryModule),
+    canActivate: [authGuard],
+  },*/
   {
     path: 'monitoring',
     loadChildren: () =>
@@ -21,15 +27,14 @@ export const routes: Routes = [
     canActivate: [authGuard],
   },
   {
-    path: 'sales',
-    loadChildren: () => import('./modules/sales/sales-module').then((m) => m.SalesModule),
+    path: 'production',
+    loadChildren: () =>
+      import('./modules/production/production-module').then((m) => m.ProductionModule),
     canActivate: [authGuard],
   },
-  { path: '**', redirectTo: '' },
   {
-    path: 'inventory',
-    loadChildren: () =>
-      import('./modules/inventory/inventory-module').then((m) => m.InventoryModule),
+    path: 'sales',
+    loadChildren: () => import('./modules/sales/sales-module').then((m) => m.SalesModule),
     canActivate: [authGuard],
   },
   { path: '**', redirectTo: '' },

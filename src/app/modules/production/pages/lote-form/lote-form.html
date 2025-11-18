@@ -1,0 +1,31 @@
+<div class="card">
+
+  <h1>Registrar Nuevo Lote</h1>
+
+  <form [formGroup]="form" (ngSubmit)="guardar()">
+
+    <label>Código del Lote</label>
+    <input formControlName="codigo" type="text" />
+
+    <label>Fecha de Siembra</label>
+    <input formControlName="fecha" type="date" />
+
+    <label>Especie</label>
+    <input formControlName="especie" type="text" />
+
+    <label>Cantidad de Postlarvas</label>
+    <input formControlName="cantidad" type="number" />
+
+    <label>Estanque Asignado</label>
+    <input formControlName="estanque" type="text" />
+
+    <label>Estado</label>
+    <select formControlName="estado">
+      <option *ngFor="let e of estados" [value]="e">{{ e }}</option>
+    </select>
+
+    <button class="btn" type="submit">Guardar Lote</button>
+
+  </form>
+
+</div>

@@ -1,0 +1,32 @@
+<div class="card">
+
+  <div class="header">
+    <h1>Cosechas</h1>
+    <button class="btn" routerLink="/production/cosecha/nuevo">+ Nueva Cosecha</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Lote</th>
+        <th>Cantidad (Kg)</th>
+        <th>Observaciones</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of cosechas">
+        <td>{{ c.fecha }}</td>
+        <td>{{ c.lote }}</td>
+        <td>{{ c.cantidadKg }}</td>
+        <td>{{ c.observaciones }}</td>
+        <td>
+          <button class="btn-edit">✏️</button>
+          <button class="btn-delete">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

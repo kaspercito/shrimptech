@@ -1,0 +1,52 @@
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  border: 1px solid #e6eefc;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #004a8f;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d0ddf7;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #0077e6;
+  box-shadow: 0 0 4px rgba(0, 119, 230, 0.4);
+}
+
+.btn {
+  width: 100%;
+  background: #0077e6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #005bb8;
+}

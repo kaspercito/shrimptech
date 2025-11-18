@@ -1,0 +1,41 @@
+.container {
+  padding: 20px;
+  min-height: 100vh;
+}
+.title {
+  font-size: 26px;
+  color: #004a8f;
+  margin-bottom: 10px;
+}
+.subtitle {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.quick-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #e5eeff;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.quick-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+  font-size: 45px;
+  display: block;
+  margin-bottom: 10px;
+}

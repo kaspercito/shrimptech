@@ -1,0 +1,28 @@
+<div class="card">
+
+  <div class="header">
+    <h1>Muestreos</h1>
+    <button class="btn" routerLink="/production/muestreos/nuevo">+ Nuevo Muestreo</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Peso Promedio (g)</th>
+        <th>Individuos</th>
+        <th>Mortalidad</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let m of muestreos">
+        <td>{{ m.fecha }}</td>
+        <td>{{ m.peso }}</td>
+        <td>{{ m.individuos }}</td>
+        <td>{{ m.mortalidad }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

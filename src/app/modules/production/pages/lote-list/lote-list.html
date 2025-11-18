@@ -1,0 +1,45 @@
+<div class="card">
+
+  <div class="header">
+    <h1>Lotes de Producción</h1>
+    <button class="btn" routerLink="/production/lotes/nuevo">+ Nuevo Lote</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Fecha de Siembra</th>
+        <th>Especie</th>
+        <th>Cantidad</th>
+        <th>Estanque</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let l of lotes">
+        <td>{{ l.codigo }}</td>
+        <td>{{ l.fecha }}</td>
+        <td>{{ l.especie }}</td>
+        <td>{{ l.cantidad | number }}</td>
+        <td>{{ l.estanque }}</td>
+
+        <td>
+          <span
+            class="estado"
+            [ngClass]="{
+              'activo': l.estado === 'Activo',
+              'cosecha': l.estado === 'En cosecha',
+              'cerrado': l.estado === 'Cerrado'
+            }"
+          >
+            {{ l.estado }}
+          </span>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+</div>

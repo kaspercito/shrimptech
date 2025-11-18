@@ -1,0 +1,72 @@
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e6eefc;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #004a8f;
+}
+
+.btn {
+  background: #0077e6;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #005bb8;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background: #f0f6ff;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #dce7ff;
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #eef3ff;
+}
+
+/* Estilos para los estados */
+.estado {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  font-size: 13px;
+}
+
+.activo {
+  background: #28a745;
+}
+
+.cosecha {
+  background: #ff9800;
+}
+
+.cerrado {
+  background: #dc3545;
+}

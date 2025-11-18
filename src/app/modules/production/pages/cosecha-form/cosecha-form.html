@@ -1,0 +1,34 @@
+<div class="card">
+
+  <div class="header">
+    <h1>Nueva Cosecha</h1>
+    <button class="btn-back" routerLink="/production/cosecha">← Volver</button>
+  </div>
+
+  <form (ngSubmit)="guardar()" class="form-container">
+
+    <div class="form-group">
+      <label>Fecha</label>
+      <input type="date" [(ngModel)]="cosecha.fecha" name="fecha" required>
+    </div>
+
+    <div class="form-group">
+      <label>Lote</label>
+      <input type="text" [(ngModel)]="cosecha.lote" name="lote" required>
+    </div>
+
+    <div class="form-group">
+      <label>Cantidad (Kg)</label>
+      <input type="number" [(ngModel)]="cosecha.cantidadKg" name="cantidadKg" required>
+    </div>
+
+    <div class="form-group">
+      <label>Observaciones</label>
+      <textarea [(ngModel)]="cosecha.observaciones" name="observaciones"></textarea>
+    </div>
+
+    <button type="submit" class="btn-save">Guardar</button>
+
+  </form>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="card">
+
+  <div class="header">
+    <h1>Nuevo Muestreo</h1>
+    <button class="btn-back" routerLink="/production/muestreos">← Volver</button>
+  </div>
+
+  <form (ngSubmit)="guardar()" class="form-container">
+
+    <div class="form-group">
+      <label>Fecha</label>
+      <input type="date" [(ngModel)]="muestreo.fecha" name="fecha" required>
+    </div>
+
+    <div class="form-group">
+      <label>Peso Promedio (g)</label>
+      <input type="number" [(ngModel)]="muestreo.peso" name="peso" required>
+    </div>
+
+    <div class="form-group">
+      <label>Número de individuos</label>
+      <input type="number" [(ngModel)]="muestreo.individuos" name="individuos" required>
+    </div>
+
+    <div class="form-group">
+      <label>Mortalidad (%)</label>
+      <input type="number" [(ngModel)]="muestreo.mortalidad" name="mortalidad" required>
+    </div>
+
+    <div class="form-group">
+      <label>Observaciones</label>
+      <textarea [(ngModel)]="muestreo.observaciones" name="observaciones"></textarea>
+    </div>
+
+    <button type="submit" class="btn-save">Guardar</button>
+
+  </form>
+</div>

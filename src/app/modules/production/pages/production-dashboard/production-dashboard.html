@@ -1,0 +1,32 @@
+<div class="dashboard">
+  <h1>Dashboard de Producción</h1>
+
+  <div class="cards-container">
+    <div class="card">
+      <h2>Lotes</h2>
+      <p>Total: {{ lotes.length }}</p>
+      <ul>
+        <li *ngFor="let l of lotes">{{ l.nombre }} - {{ l.cantidad }} individuos</li>
+      </ul>
+      <button class="btn" routerLink="/production/lotes">Ver Lotes</button>
+    </div>
+
+    <div class="card">
+      <h2>Muestreos</h2>
+      <p>Total: {{ muestreos.length }}</p>
+      <ul>
+        <li *ngFor="let m of muestreos">{{ m.fecha }} - Peso: {{ m.peso }} g</li>
+      </ul>
+      <button class="btn" routerLink="/production/muestreos">Ver Muestreos</button>
+    </div>
+
+    <div class="card">
+      <h2>Cosechas</h2>
+      <p>Total: {{ cosechas.length }}</p>
+      <ul>
+        <li *ngFor="let c of cosechas">{{ c.fecha }} - {{ c.cantidadKg }} Kg</li>
+      </ul>
+      <button class="btn" routerLink="/production/cosecha">Ver Cosechas</button>
+    </div>
+  </div>
+</div>

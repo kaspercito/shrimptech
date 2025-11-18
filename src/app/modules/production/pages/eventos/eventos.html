@@ -1,0 +1,39 @@
+<div class="card">
+  
+  <div class="header">
+    <h1>Eventos Productivos</h1>
+    <button class="btn" routerLink="/production/eventos/nuevo">+ Nuevo Evento</button>
+
+
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Tipo</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let e of eventos">
+        <td>{{ e.fecha }}</td>
+
+        <td>
+          <span class="tipo"
+            [ngClass]="{
+              'alimentacion': e.tipo === 'Alimentación',
+              'tratamiento': e.tipo === 'Tratamiento',
+              'incidencia': e.tipo === 'Incidencia'
+            }">
+            {{ e.tipo }}
+          </span>
+        </td>
+
+        <td>{{ e.nota }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
