@@ -1,8 +1,9 @@
-body, html {
+body,
+html {
   font-family: 'Helvetica Neue', sans-serif !important;
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
 }
 
 .app-container {
@@ -24,16 +25,39 @@ footer {
 }
 
 /* Encabezados */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   color: #000000;
 }
 
-body, p, label, button, select, input, textarea,
-a, span, div, table, th, td,
-.card, .card-body,
-.btn, .form-label, .form-select, .form-control,
-.modal-content, .modal-header, .modal-body, .modal-footer {
+body,
+p,
+label,
+button,
+select,
+input,
+textarea,
+a,
+span,
+div,
+table,
+th,
+td,
+.card,
+.card-body,
+.btn,
+.form-label,
+.form-select,
+.form-control,
+.modal-content,
+.modal-header,
+.modal-body,
+.modal-footer {
   font-family: 'Helvetica Neue', sans-serif !important;
   font-weight: normal;
 }
@@ -80,7 +104,8 @@ a, span, div, table, th, td,
   color: white !important;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   border-color: #cecece !important;
 }
 

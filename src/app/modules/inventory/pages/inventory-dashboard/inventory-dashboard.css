@@ -1,0 +1,51 @@
+.inventory-modules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 80vh;
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.inventory-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inventory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: #0097a7;
+}
+
+.module-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.inventory-card h3 {
+  color: #0097a7;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.inventory-card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}

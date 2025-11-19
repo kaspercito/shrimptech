@@ -1,22 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InventoryRoutingModule } from './inventory-routing-module';
-import { Products } from './components/products/products';
-import { Movements } from './components/movements/movements';
-import { Alerts } from './components/alerts/alerts';
-import { Reports } from './components/reports/reports';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    InventoryRoutingModule,
-    Products,  
-    Movements,
-    Alerts,
-    Reports
-  ]
+  imports: [CommonModule, InventoryRoutingModule, RouterModule],
 })
-export class InventoryModule { }
-
-
+export class InventoryModule {}
