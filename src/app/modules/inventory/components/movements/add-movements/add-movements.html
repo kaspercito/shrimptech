@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Registrar Movimiento</h2>
+<div mat-dialog-content>
+
+    <mat-form-field appearance="outline" style="width: 100%;" class="first-field">
+      <mat-label>Fecha:</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="movimiento.fecha">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Producto:</mat-label>
+      <mat-select [(ngModel)]="movimiento.producto">
+        <mat-option value="Producto 1">Producto 1</mat-option>
+        <mat-option value="Producto 2">Producto 2</mat-option>
+        <mat-option value="Producto 2">Producto 3</mat-option>
+        <mat-option value="Producto 2">Producto 4</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Tipo de Movimiento:</mat-label>
+      <mat-select [(ngModel)]="movimiento.tipo">
+        <mat-option value="Entrada">Entrada</mat-option>
+        <mat-option value="Salida">Salida</mat-option>
+        <mat-option value="Ajuste">Ajuste</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Cantidad:</mat-label>
+      <input matInput type="number" [(ngModel)]="movimiento.cantidad">
+    </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Responsable:</mat-label>
+    <input matInput type="text" [(ngModel)]="movimiento.responsable">
+  </mat-form-field>
+</div>
+
+<!-- BOTONES -->
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="cancelar()">Cancelar</button>
+  <button mat-flat-button color="primary" (click)="guardar()">Guardar</button>
+</div>
+

@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Ver Producto</h2>
+<div mat-dialog-content>
+
+  <mat-form-field appearance="outline" style="width: 100%;" class="first-field">
+    <mat-label>Lote:</mat-label>
+    <input matInput [value]="producto.lote" readonly>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Tipo de Camarón:</mat-label>
+    <input matInput [value]="producto.tipo" readonly>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Estanque:</mat-label>
+    <input matInput [value]="producto.estanque" readonly>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Stock:</mat-label>
+    <input matInput [value]="producto.stock" readonly>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Peso Promedio (g):</mat-label>
+    <input matInput [value]="producto.peso" readonly>
+  </mat-form-field>
+</div>
+
+<!-- BOTONES -->
+<div mat-dialog-actions align="center">
+  <button mat-flat-button color="primary" (click)="cerrar()">Cerrar</button>
+</div>

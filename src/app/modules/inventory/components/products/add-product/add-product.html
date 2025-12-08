@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>Agregar Producto</h2>
+<div mat-dialog-content>
+
+  <mat-form-field appearance="outline" style="width: 100%;" class="first-field">
+    <mat-label>Lote:</mat-label>
+    <input matInput [(ngModel)]="producto.lote">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Tipo de Camarón:</mat-label>
+    <mat-select [(ngModel)]="producto.tipo">
+      <mat-option *ngFor="let tipo of data.tipos" [value]="tipo">
+        {{ tipo }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Estanque:</mat-label>
+    <mat-select [(ngModel)]="producto.estanque">
+      <mat-option *ngFor="let estanque of data.estanques" [value]="estanque">
+        {{ estanque }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Stock:</mat-label>
+    <input matInput type="number" [(ngModel)]="producto.stock">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Peso Promedio (g):</mat-label>
+    <input matInput type="number" [(ngModel)]="producto.peso">
+  </mat-form-field>
+
+</div>
+
+<!-- BOTONES -->
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="cancelar()">Cancelar</button>
+  <button mat-flat-button color="primary" (click)="guardar()">Guardar</button>
+</div>

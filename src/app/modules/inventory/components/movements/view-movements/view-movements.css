@@ -1,0 +1,51 @@
+/* TÍTULO */
+.mat-mdc-dialog-content {
+  background-color: white !important;
+}
+
+h2[mat-dialog-title] {
+  background-color: white !important;
+  color: #0097a7 !important;
+  text-align: center !important;
+  font-weight: bold;
+  font-family: "Helvetica Neue", sans-serif !important;
+  margin-bottom: 15px;
+}
+
+::ng-deep .mat-mdc-dialog-title {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* BOTONES */
+div[mat-dialog-actions] {
+  background-color: white !important;
+  display: flex !important;
+  justify-content: center !important;   
+  gap: 10px;                             
+}
+
+div[mat-dialog-actions] button {
+  background-color: #0097a7 !important;
+  color: white !important;
+  font-weight: bold;
+  font-family: "Helvetica Neue", sans-serif !important;
+  border-radius: 4px !important;       
+  padding: 8px 16px !important;       
+  min-width: 120px !important;         
+  height: 40px !important;             
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div[mat-dialog-actions] button:hover {
+  opacity: 0.9;
+}
+
+/* ESPACIO MODAL */
+.first-field {
+  margin-top: 15px; 
+}
+

@@ -1,42 +1,230 @@
-h2 {
+/* TIPOGRAFÍA */
+body, html {
+  font-family: 'Helvetica Neue', sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+body, p, label, button, select, input, textarea, a, span, div {
+  font-family: 'Helvetica Neue', sans-serif !important;
+}
+
+/* CONTENEDOR */
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TÍTULO */
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0097a7;
+  margin-bottom: 25px;
+  text-align: center; 
+  margin-top: 30px; 
+}
+
+.section-title {
+  width: 88%;                   
+  margin: 30px auto 25px auto;  
+  background-color: #0097a7;    
+  padding: 40px 40px;           
+  border-radius: 8px;            
+  box-sizing: border-box;        
+  text-align: center;            
+  color: white;                  
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* CONTENEDORES FILTROS */
+.table-container {
+  width: 88%;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.table-container h2 {
+  font-weight: bold;
+  margin-bottom: 20px; 
+  font-size: 20px;     
+  color: #000000;     
+}
+
+/* CONTENEDOR GRÁFICA */
+.chart-container {
+  width: 100%;
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* TÍTULO DE LA GRÁFICA */
+.chart-title {
+  font-weight: bold;
   color: #000000;
+  font-size: 20px;
+  margin-bottom: 15px; 
+  text-align: left;   
 }
 
-.card {
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* CANVAS */
+.chart-container canvas {
+  width: 100% !important;
+  height: 300px !important; 
+  display: block;
 }
 
-.table thead th {
-  text-align: center;
+/* CONTENEDOR BOTONES */
+.add-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;  
+  gap: 15px;                
+  margin-top: 15px;
 }
 
-.table tbody td {
-  vertical-align: middle;
-  text-align: center;
+/* BOTÓN FILTRAR */
+.btn-filtrar {
+  background-color: #0097a7 !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 6px !important;
+  padding: 6px 15px !important;
+  border: none !important;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2); 
 }
 
-.btn {
-  font-weight: 500;
+.btn-filtrar:hover {
+  background-color: #007c86 !important;
 }
 
-.table thead th {
-  background-color: #0097a7 !important; 
-  color: white !important;               
-  font-weight: normal;
+/* BOTÓN LIMPIAR */
+.btn-limpiar {
+  background-color: #0097a7 !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 6px !important;
+  padding: 6px 15px !important;
+  border: none !important;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2); 
 }
 
-.table th {
-  border-color: #cecece !important;
+.btn-limpiar:hover {
+  background-color: #007c86 !important;
 }
 
-.btn-celeste {
-  background-color: #0097a7 !important; 
-  border-color: #0097a7 !important;
+/* CONTENEDOR BOTÓN PDF */
+.pdf-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;  
+  margin-top: 15px;
+}
+
+/* BOTÓN PDF */
+.btn-pdf {
+  background-color: #0097a7 !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 6px !important;
+  padding: 6px 15px !important;
+  border: none !important;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2); 
+}
+
+.btn-pdf:hover {
+  background-color: #007c86 !important;
+}
+
+/* ÍCONOS BOTONES */
+.add-button-container mat-icon,
+.pdf-button-container mat-icon {
+  font-size: 16px !important; 
+  vertical-align: middle;     
+  margin-right: 5px;           
+}
+
+/* CONTENEDOR FILTROS */
+.filtros {
+  display: flex;
+  flex-direction: row;   
+  gap: 20px;            
+  flex-wrap: wrap;       
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.filtro-item {
+  flex: 1 1 200px;       
+  min-width: 200px;      
+}
+
+.filtros mat-form-field {
+  width: 100% !important;
+}
+
+.filtro-item .mat-mdc-form-field,
+.filtro-item .mat-mdc-text-field-wrapper,
+.filtro-item .mat-mdc-form-field-flex,
+.filtro-item input.mat-mdc-input-element {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* SELECTS */
+::ng-deep .mat-mdc-select .mat-mdc-select-trigger {
+  background-color: white !important;
+  color: black !important;
+}
+
+::ng-deep .mat-mdc-select-panel .mat-mdc-option {
+  background-color: white !important;
+  color: black !important;
+}
+
+::ng-deep .mat-mdc-select-panel .mat-mdc-option:hover {
+  background-color: #0097a7 !important;
   color: white !important;
 }
 
-.btn-celeste:hover {
-  background-color: #0097a7 !important;
-  border-color: #0097a7 !important;
+/* TABLA */
+.mat-mdc-table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
 }
+
+.mat-header-row,
+.mat-mdc-header-row {
+  background-color: #0097a7 !important;
+  font-family: 'Helvetica Neue', sans-serif !important;
+}
+
+.mat-header-cell,
+.mat-mdc-header-cell {
+  background-color: #0097a7 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif !important; 
+}
+
+.mat-mdc-cell {
+  font-size: 16px;
+}
+
+.mat-row:hover {
+  background-color: #e5f3f5 !important;
+}
+
