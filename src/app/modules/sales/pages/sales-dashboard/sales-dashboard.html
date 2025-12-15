@@ -1,21 +1,53 @@
 <div class="sales-dashboard">
   <!-- HEADER DEL MÓDULO -->
   <div class="dashboard-header">
-    <h1>💰 Módulo Comercial y de Ventas</h1>
-    <p class="subtitle">Gestión completa del ciclo de ventas</p>
+    <div class="header-content">
+      <h1>💰 Módulo Comercial y de Ventas</h1>
+      <p class="subtitle">Gestión completa del ciclo de ventas</p>
+    </div>
+    
+    <!-- Estadísticas en tiempo real -->
     <div class="header-stats">
       <div class="stat-card">
-        <span class="stat-value">48</span>
+        <div class="stat-header">
+          <span class="stat-value">{{ activeCustomers }}</span>
+          <span class="stat-trend {{ getTrendClass(customersTrend) }}">
+            {{ getTrendIcon(customersTrend) }}
+          </span>
+        </div>
         <span class="stat-label">Clientes activos</span>
+        <span class="stat-subtext">+5 este mes</span>
       </div>
+      
       <div class="stat-card">
-        <span class="stat-value">$42,850</span>
+        <div class="stat-header">
+          <span class="stat-value">{{ formatCurrency(monthlySales) }}</span>
+          <span class="stat-trend {{ getTrendClass(salesTrend) }}">
+            {{ getTrendIcon(salesTrend) }}
+          </span>
+        </div>
         <span class="stat-label">Ventas este mes</span>
+        <span class="stat-subtext">+15% vs mes anterior</span>
       </div>
+      
       <div class="stat-card">
-        <span class="stat-value">12</span>
+        <div class="stat-header">
+          <span class="stat-value">{{ pendingOrders }}</span>
+          <span class="stat-trend {{ getTrendClass(ordersTrend) }}">
+            {{ getTrendIcon(ordersTrend) }}
+          </span>
+        </div>
         <span class="stat-label">Pedidos pendientes</span>
+        <span class="stat-subtext">Requieren atención</span>
       </div>
+    </div>
+      </div>
+
+  <!-- Loading State -->
+  <div *ngIf="isLoading" class="dashboard-loading">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <p>Cargando datos del dashboard...</p>
     </div>
   </div>
 
